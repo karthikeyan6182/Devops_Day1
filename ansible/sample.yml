@@ -8,6 +8,5 @@
     - name: print Tasks2
         ansible.builtin.debug:
           msg:"Task2"
-
 - name: Play2
   hosts: all
