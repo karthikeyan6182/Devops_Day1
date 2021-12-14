@@ -1,0 +1,13 @@
+- name: Install Ngnix
+  yum:
+    name: ngnix
+    state: latest
+- name: Start Ngnix service
+  ansible.builtin.systemd:
+    state: restarted
+    name: ngnix
+    enable:yes
+- name: Download code
+  include_role:
+    name: common
+    tasks_from: download
